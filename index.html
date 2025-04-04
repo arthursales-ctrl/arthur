@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Front-End Developer</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #04394E, #00875E, #A7CC15);
+            color: white;
+            margin: 0;
+            animation: backgroundAnimation 10s infinite alternate;
+        }
+        
+        @keyframes backgroundAnimation {
+            0% { background-position: left; }
+            100% { background-position: right; }
+        }
+
+        .container {
+            background: rgba(4, 57, 78, 0.8);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            max-width: 800px;
+            text-align: center;
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #A7CC15;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .profile-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #F5CC17;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .button, .whatsapp-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: linear-gradient(45deg, #F5CC17, #F56217);
+            color: black;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 18px;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+        }
+        .button:hover, .whatsapp-button:hover {
+            background: linear-gradient(45deg, #F56217, #F5CC17);
+            transform: scale(1.1);
+        }
+        .hidden {
+            display: none;
+        }
+        .work-examples {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .work-example {
+            width: 280px;
+            height: 180px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .work-example img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .work-example:hover {
+            transform: scale(1.05);
+        }
+        .social {
+            margin-top: 20px;
+        }
+        .social p {
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function toggleBio() {
+            var bio = document.getElementById("bio");
+            bio.classList.toggle("hidden");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img class="profile-img" src="arthur progamador.jpeg" alt="Minha Foto">
+        <h1> Sou Desenvolvedor Front-End!</h1>
+        <p>Sou apaixonado por criar interfaces incríveis e funcionais para a web. Trabalho com HTML, CSS, JavaScript e frameworks modernos como React e Vue.js.</p>
+        <button class="button" onclick="toggleBio()">Mais sobre mim</button>
+        <p id="bio" class="hidden">Tenho experiência no desenvolvimento de interfaces responsivas e dinâmicas, focadas na melhor experiência do usuário. Meu trabalho envolve tanto a parte visual quanto a interação do usuário com os elementos da página, tornando a navegação fluída e intuitiva.</p>
+        <p>Tenho 17 Anos</p>
+        
+        <div class="work-examples">
+            <div class="work-example">
+                <img src="foto um  (1).jpeg" alt="Exemplo de trabalho 1">
+            </div>
+            <div class="work-example">
+                <img src="foto um  (2).jpeg" alt="Exemplo de trabalho 2">
+            </div>
+            <div class="work-example">
+                <img src="image (1).png" alt="Exemplo de trabalho 3">
+            </div>
+        </div>
+
+        <div class="social">
+            <p><strong>Contato:</strong> +55 85 8182-2724</p>
+            <p><strong>Instagram:</strong> sr.arthursales076</p>
+        </div>
+
+        <a href="https://wa.me/558581822724?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20voc%C3%AA." target="_blank" class="whatsapp-button">
+            📩 Fale comigo no WhatsApp
+        </a>
+    </div>
+</body>
+</html>
